@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Disable toolbar in dev mode
+source npx astro preferences disable devToolbar
+source npx backstop test --config=backstop.json
+# Enable toolbar after screenshots have been taken
+source npx astro preferences enable devToolbar
+
+# Code is currently non blocking but might change in the future
